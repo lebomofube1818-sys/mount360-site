@@ -1,0 +1,220 @@
+/* styles.css */
+
+/* Custom font import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --color-primary: #101D38; /* Dark Navy */
+    --color-accent: #00C9B1;  /* Bright Teal */
+}
+
+/* Base */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc; /* Light Gray Background */
+    scroll-behavior: smooth;
+}
+
+/* Helpers using CSS vars */
+.bg-primary { background-color: var(--color-primary); }
+.text-primary { color: var(--color-primary); }
+.text-accent { color: var(--color-accent); }
+.bg-accent { background-color: var(--color-accent); }
+.border-accent { border-color: var(--color-accent); }
+.hover\:bg-accent:hover { background-color: var(--color-accent); }
+
+/* Section padding */
+.section-padding {
+    padding: 4rem 1rem;
+}
+@media (min-width: 640px) {
+    .section-padding { padding: 6rem 2rem; }
+}
+
+/* Buttons */
+.btn-primary {
+    color: var(--color-primary);
+    background: var(--color-accent);
+}
+/* Navbar hover effect */
+.nav-link {
+    position: relative;
+    color: var(--color-primary);
+    transition: all 0.3s ease;
+}
+
+/* Underline effect on hover */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-accent);
+    transition: width 0.3s ease;
+}
+
+/* Hover expands underline */
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Hover color + slight scale */
+.nav-link:hover {
+    color: var(--color-accent);
+    transform: scale(1.05);
+}
+
+/* Focus & accessibility */
+:focus { outline: 2px solid rgba(0,0,0,0); outline-offset: 2px; }
+.focus\:ring-accent:focus { box-shadow: 0 0 0 3px rgba(0,201,177,0.18); border-color: var(--color-accent); }
+:focus-visible { outline: 3px solid rgba(0,201,177,0.22); }
+
+/* =======================
+   Hero Section Styles
+======================= */
+.hero-bg {
+    background: linear-gradient(rgba(16,29,56,0.85), rgba(16,29,56,0.85)), url('assets/images/WhatsApp_Image_2025-10-28_4.03.55_PM.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Hero content */
+.hero-content {
+    position: relative;
+    z-index: 10;
+    transition: transform 0.2s ease-out;
+}
+
+/* Parallax circles */
+.parallax-circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.2;
+    filter: blur(18px);
+    animation: floatCircle linear infinite;
+}
+
+/* Assign different sizes and animation speeds via classes */
+.circle-small { width: 80px; height: 80px; animation-duration: 12s; }
+.circle-medium { width: 120px; height: 120px; animation-duration: 18s; }
+.circle-large { width: 200px; height: 200px; animation-duration: 25s; }
+
+/* Continuous float animation */
+@keyframes floatCircle {
+    0% { transform: translateY(0) translateX(0); }
+    50% { transform: translateY(-30px) translateX(20px); }
+    100% { transform: translateY(0) translateX(0); }
+}
+
+/* Circle glow on hover */
+.parallax-circle:hover {
+    box-shadow: 0 0 60px 20px rgba(0,201,177,0.35);
+    transform: scale(1.1);
+    opacity: 0.35;
+}
+
+/* =======================
+   Find Out More Button
+======================= */
+
+/* =======================
+   Sponsor Logo Carousel
+======================= */
+
+/* Animate scroll from right to left */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Carousel container animation */
+.animate-scroll {
+    display: flex;
+    gap: 3rem;
+    min-width: max-content;
+    animation: scroll 30s linear infinite;
+    align-items: center;
+}
+
+/* Circular Logo Styling */
+.logo {
+    width: 4rem; /* 64px */
+    height: 4rem;
+    border-radius: 50%; /* Makes logos circular */
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover effect with glow */
+.logo:hover {
+    transform: scale(1.25);
+    opacity: 1;
+    box-shadow: 0 8px 20px rgba(0, 201, 177, 0.4);
+}
+
+/* Add fading effect at edges using mask */
+.sponsor-mask {
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+    mask-repeat: no-repeat;
+    mask-size: 100% 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .animate-scroll {
+        gap: 2rem;
+        animation: scroll 40s linear infinite; /* slower scroll on tablets */
+    }
+    .logo {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .animate-scroll {
+        gap: 1.5rem;
+        animation: scroll 50s linear infinite; /* slowest scroll on mobile */
+    }
+    .logo {
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid rgba(255,255,255,0.7);
+    border-radius: 9999px;
+    background-color: rgba(255,255,255,0.05);
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.hero-btn svg {
+    width: 20px;
+    height: 20px;
+    stroke-width: 2;
+}
+
+.hero-btn:hover {
+    background-color: rgba(0,201,177,0.1);
+    border-color: var(--color-accent);
+    box-shadow: 0 0 20px rgba(0,201,177,0.5);
+    transform: translateY(-2px);
+}

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Mount360 Creative House</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="antialiased text-gray-800">
+
+<!-- Navbar -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+        <a href="index.html" class="flex items-center space-x-2">
+            <img src="WhatsApp Image 2025-10-28 at 4.03.55 PM.jpeg" alt="Mount360 Logo" class="h-10 w-auto rounded-md">
+            <span class="text-xl font-extrabold text-primary hidden sm:block">Mount360</span>
+        </a>
+        <nav class="hidden md:flex space-x-8 font-medium">
+            <a href="index.html" class="text-primary hover:text-accent transition duration-300">Home</a>
+            <a href="services.html" class="text-primary hover:text-accent transition duration-300">Services</a>
+            <a href="portfolio.html" class="text-primary hover:text-accent transition duration-300">Portfolio</a>
+            <a href="about.html" class="text-primary hover:text-accent transition duration-300">About Us</a>
+            <a href="contact.html" class="text-primary hover:text-accent transition duration-300">Contact</a>
+            <a href="blog.html" class="text-primary hover:text-accent transition duration-300">Blog</a>
+        </nav>
+        <button id="mobile-menu-button" class="md:hidden text-primary focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 class="lucide lucide-menu">
+                <line x1="4" x2="20" y1="12" y2="12"/>
+                <line x1="4" x2="20" y1="6" y2="6"/>
+                <line x1="4" x2="20" y1="18" y2="18"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg pb-4">
+        <a href="index.html" class="block px-4 py-2 text-primary hover:bg-gray-100">Home</a>
+        <a href="services.html" class="block px-4 py-2 text-primary hover:bg-gray-100">Services</a>
+        <a href="portfolio.html" class="block px-4 py-2 text-primary hover:bg-gray-100">Portfolio</a>
+        <a href="about.html" class="block px-4 py-2 text-primary hover:bg-gray-100">About Us</a>
+        <a href="contact.html" class="block px-4 py-2 text-primary hover:bg-gray-100">Contact</a>
+        <a href="blog.html" class="block px-4 py-2 text-primary hover:bg-gray-100">Blog</a>
+    </div>
+</header>
+
+<!-- About Hero Section (with blue overlay) -->
+<section class="relative section-padding min-h-[60vh] flex flex-col items-center justify-center overflow-hidden">
+    <!-- Background Image with blur and subtle blue overlay -->
+    <div class="absolute inset-0">
+        <img src="WhatsApp Image 2025-10-28 at 4.03.55 PM.jpeg"
+             alt="Background"
+             class="w-full h-full object-center object-center blur-sm animate-[float_10s_ease-in-out_infinite]">
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-800/60 via-purple-700/40 to-pink-800/50 mix-blend-multiply"></div>
+
+    <div class="text-center relative z-10">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-4 text-white">About Mount360: Driving Innovation Worldwide.</h1>
+        <p class="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto mb-8">
+            From Lesotho to Southern Africa and beyond, we transform ideas into impactful solutions. Discover our mission, philosophy, and journey of innovation that powers growth and inspires change globally.
+        </p>
+
+        <!-- Quick Links with Icons -->
+        <div class="flex justify-center gap-6 flex-wrap mb-8">
+            <a href="index.html" class="flex items-center gap-2 px-4 py-2 bg-white/20 rounded-lg hover:bg-white/30 transition duration-300 text-white">
+                <svg data-lucide="home" class="w-5 h-5"></svg>
+                <span>Home</span>
+            </a>
+            <a href="services.html" class="flex items-center gap-2 px-4 py-2 bg-white/20 rounded-lg hover:bg-white/30 transition duration-300 text-white">
+                <svg data-lucide="briefcase" class="w-5 h-5"></svg>
+                <span>Services</span>
+            </a>
+            <a href="portfolio.html" class="flex items-center gap-2 px-4 py-2 bg-white/20 rounded-lg hover:bg-white/30 transition duration-300 text-white">
+                <svg data-lucide="grid" class="w-5 h-5"></svg>
+                <span>Portfolio</span>
+            </a>
+            <a href="contact.html" class="flex items-center gap-2 px-4 py-2 bg-white/20 rounded-lg hover:bg-white/30 transition duration-300 text-white">
+                <svg data-lucide="mail" class="w-5 h-5"></svg>
+                <span>Contact</span>
+            </a>
+        </div>
+
+        <!-- Let’s Connect Section with hover effects -->
+        <div class="flex flex-col items-center gap-3 text-center text-white">
+            <h3 class="text-2xl font-bold mb-2">Let’s Connect</h3>
+            <p class="mb-1 hover:text-accent transition duration-300 cursor-pointer">Have a project or question? Reach out — we’re ready to collaborate and help your ideas ascend.</p>
+            <p class="mb-1 hover:text-accent transition duration-300 cursor-pointer">📧 mount360@gmail.com</p>
+            <p class="mb-1 hover:text-accent transition duration-300 cursor-pointer">📞 +266 2232 3239</p>
+            <p class="mb-2 hover:text-accent transition duration-300 cursor-pointer">📍 Moonstar complex, Room 09</p>
+            <a href="contact.html" class="px-6 py-2 bg-accent text-white rounded-lg font-semibold hover:bg-primary transition duration-300 transform hover:-translate-y-1">Book a Consultation</a>
+        </div>
+    </div>
+</section>
+
+<!-- About Content -->
+<main class="section-padding max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-2 gap-12 items-center mt-12">
+        <div>
+            <h2 class="text-3xl font-bold mb-4">Who We Are</h2>
+            <p class="text-gray-600 mb-4">
+                Mount360 Creative House is a full-service consultancy delivering innovation, strategy, and growth solutions to clients worldwide, with a strong focus on Southern Africa. We specialize in transforming ideas into tangible results, empowering businesses to thrive in a rapidly evolving market.
+            </p>
+            <p class="text-gray-600">
+               Our mission is to seamlessly integrate creativity, technology, and strategic thinking to provide businesses with sustainable, scalable, and market-leading solutions. Through collaboration, insight, and innovation, we help organizations unlock their full potential and achieve lasting impact across borders.
+            </p>
+        </div>
+        <div>
+            <img src="WhatsApp Image 2025-10-28 at 11.06.42 AM.jpeg" alt="Our Team" class="w-full rounded-xl shadow-lg object-cover h-80">
+        </div>
+    </div>
+</main>
+
+<!-- Footer (replaced only) -->
+<footer class="bg-primary text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+
+        <!-- Logo & Tagline -->
+        <div>
+            <img src="WhatsApp Image 2025-10-28 at 4.03.55 PM.jpeg" alt="Mount360 Creative House Logo"
+                 class="h-12 w-auto mx-auto md:mx-0 rounded-md mb-4">
+            <h3 class="text-xl font-bold mb-2">Mount360 Creative House</h3>
+            <p class="text-gray-200 text-sm">Elevating businesses through strategic design and innovative consulting.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+            <h4 class="font-semibold text-lg mb-3">Quick Links</h4>
+            <ul class="space-y-2 text-gray-200 text-sm">
+                <li><a href="about.html" class="hover:text-accent transition">About Us</a></li>
+                <li><a href="services.html" class="hover:text-accent transition">Services</a></li>
+                <li><a href="portfolio.html" class="hover:text-accent transition">Portfolio</a></li>
+            </ul>
+        </div>
+
+        <!-- Legal -->
+        <div>
+            <h4 class="font-semibold text-lg mb-3">Legal</h4>
+            <ul class="space-y-2 text-gray-200 text-sm">
+                <li><a href="#" class="hover:text-accent transition">Privacy Policy</a></li>
+                <li><a href="#" class="hover:text-accent transition">Terms of Service</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+            <h4 class="font-semibold text-lg mb-3">Contact</h4>
+            <p class="text-gray-200 text-sm">📞 +266 2232 3239</p>
+            <p class="text-gray-200 text-sm mt-2">📧 mount360@gmail.com</p>
+            <p class="text-gray-200 text-sm mt-2">📍 Moonstar complex, Room 09</p>
+        </div>
+    </div>
+
+    <div class="border-t border-white/20 mt-8 pt-4 text-center text-gray-300 text-sm">
+        © 2025 Mount360 Creative House. All rights reserved.
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script>
+    lucide.createIcons();
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => { link.addEventListener('click', () => { mobileMenu.classList.add('hidden'); }); });
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

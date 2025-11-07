@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services - Mount360 Creative House</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="antialiased text-gray-800">
+
+<!-- Navbar -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center space-x-2">
+            <img src="WhatsApp Image 2025-10-28 at 4.03.55 PM.jpeg" alt="Mount360 Logo" class="h-10 w-auto rounded-md">
+            <span class="text-xl font-extrabold text-primary hidden sm:block">Mount360</span>
+        </a>
+
+        <!-- Navigation -->
+        <nav class="hidden md:flex space-x-8 font-medium">
+            <a href="index.html" class="text-primary hover:text-accent transition duration-300">Home</a>
+            <a href="services.html" class="text-primary hover:text-accent transition duration-300">Services</a>
+            <a href="portfolio.html" class="text-primary hover:text-accent transition duration-300">Portfolio</a>
+            <a href="about.html" class="text-primary hover:text-accent transition duration-300">About Us</a>
+            <a href="contact.html" class="text-primary hover:text-accent transition duration-300">Contact</a>
+            <a href="blog.html" class="text-primary hover:text-accent transition duration-300">Blog</a>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="md:hidden text-primary focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 class="lucide lucide-menu">
+                <line x1="4" x2="20" y1="12" y2="12" />
+                <line x1="4" x2="20" y1="6" y2="6" />
+                <line x1="4" x2="20" y1="18" y2="18" />
+            </svg>
+        </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg pb-4">
+        <a href="index.html" class="block px-4 py-2 text-primary hover:bg-gray-100">Home</a>
+        <a href="services.html" class="block px-4 py-2 text-primary hover:bg-gray-100">Services</a>
+        <a href="portfolio.html" class="block px-4 py-2 text-primary hover:bg-gray-100">Portfolio</a>
+        <a href="about.html" class="block px-4 py-2 text-primary hover:bg-gray-100">About Us</a>
+        <a href="contact.html" class="block px-4 py-2 text-primary hover:bg-gray-100">Contact</a>
+        <a href="blog.html" class="block px-4 py-2 text-primary hover:bg-gray-100">Blog</a>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="relative min-h-[50vh] md:min-h-[70vh] flex items-center">
+    <!-- Background Image (with blur) -->
+    <div class="absolute inset-0">
+        <img src="WhatsApp Image 2025-10-28 at 4.03.55 PM.jpeg" alt="Background"
+             class="w-full h-full object-center object-center blur-sm animate-[float_10s_ease-in-out_infinite]">
+    </div>
+    <!-- Dim Overlay -->
+   <div class="absolute inset-0 bg-gradient-to-br from-blue-800/60 via-purple-700/40 to-pink-800/50 mix-blend-multiply"></div>
+    <!-- Text -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-4">
+            What We Do Best
+        </h1>
+        <p class="text-lg sm:text-xl md:text-2xl text-white mb-6">
+        <i>Discover our 360° spectrum of services, thoughtfully crafted to empower your brand, spark innovation, and accelerate your business growth. From strategy to execution, we’re here to guide you at every angle of your journey.</i>
+        </p>
+
+        <!-- Animated Service Tabs -->
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="#strategy" class="flex items-center px-4 py-2 bg-accent text-primary rounded-lg shadow-lg 
+                hover:bg-primary hover:text-white transition duration-300 transform hover:scale-105 hover:shadow-2xl group">
+                <svg data-lucide="compass" class="w-5 h-5 mr-2 transition-colors duration-300 group-hover:text-white"></svg>
+                <span class="font-semibold">Strategy & Consulting</span>
+            </a>
+            <a href="#branding" class="flex items-center px-4 py-2 bg-accent text-primary rounded-lg shadow-lg 
+                hover:bg-primary hover:text-white transition duration-300 transform hover:scale-105 hover:shadow-2xl group">
+                <svg data-lucide="palette" class="w-5 h-5 mr-2 transition-colors duration-300 group-hover:text-white"></svg>
+                <span class="font-semibold">Branding & Design</span>
+            </a>
+            <a href="#digital" class="flex items-center px-4 py-2 bg-accent text-primary rounded-lg shadow-lg 
+                hover:bg-primary hover:text-white transition duration-300 transform hover:scale-105 hover:shadow-2xl group">
+                <svg data-lucide="code" class="w-5 h-5 mr-2 transition-colors duration-300 group-hover:text-white"></svg>
+                <span class="font-semibold">Digital Solutions</span>
+            </a>
+            <a href="#marketing" class="flex items-center px-4 py-2 bg-accent text-primary rounded-lg shadow-lg 
+                hover:bg-primary hover:text-white transition duration-300 transform hover:scale-105 hover:shadow-2xl group">
+                <svg data-lucide="megaphone" class="w-5 h-5 mr-2 transition-colors duration-300 group-hover:text-white"></svg>
+                <span class="font-semibold">Marketing & Outreach</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Services Grid -->
+<main class="section-padding max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-12">
+
+        <!-- Strategy & Consulting -->
+        <div id="strategy" class="p-6 border border-gray-200 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+            <div class="text-accent mb-4 mx-auto w-12 h-12 flex items-center justify-center rounded-full bg-primary/10">
+                <svg data-lucide="compass" class="w-6 h-6"></svg>
+            </div>
+            <h3 class="text-xl font-bold text-primary mb-2">Strategy & Consulting</h3>
+            <p class="text-gray-600 text-sm">
+                Crafting scalable roadmaps, market analysis, and long-term business strategy to ensure sustainable growth.
+            </p>
+        </div>
+
+        <!-- Branding & Design -->
+        <div id="branding" class="p-6 border border-gray-200 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+            <div class="text-accent mb-4 mx-auto w-12 h-12 flex items-center justify-center rounded-full bg-primary/10">
+                <svg data-lucide="palette" class="w-6 h-6"></svg>
+            </div>
+            <h3 class="text-xl font-bold text-primary mb-2">Branding & Design</h3>
+            <p class="text-gray-600 text-sm">
+                Forging powerful brand identities, corporate design, and visual assets that resonate with your core audience.
+            </p>
+        </div>
+
+        <!-- Digital Solutions -->
+        <div id="digital" class="p-6 border border-gray-200 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+            <div class="text-accent mb-4 mx-auto w-12 h-12 flex items-center justify-center rounded-full bg-primary/10">
+                <svg data-lucide="code" class="w-6 h-6"></svg>
+            </div>
+            <h3 class="text-xl font-bold text-primary mb-2">Digital Solutions</h3>
+            <p class="text-gray-600 text-sm">
+                Developing modern, responsive websites, mobile apps, and robust backend infrastructure.
+            </p>
+        </div>
+
+        <!-- Marketing & Outreach -->
+        <div id="marketing" class="p-6 border border-gray-200 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1">
+            <div class="text-accent mb-4 mx-auto w-12 h-12 flex items-center justify-center rounded-full bg-primary/10">
+                <svg data-lucide="megaphone" class="w-6 h-6"></svg>
+            </div>
+            <h3 class="text-xl font-bold text-primary mb-2">Marketing & Outreach</h3>
+            <p class="text-gray-600 text-sm">
+                Executing data-driven marketing campaigns, SEO, content strategy, and public relations.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Let's Connect (replaces Quick Links) -->
+    <div class="mt-12">
+        <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-lg p-6 flex flex-col md:flex-row items-center gap-6">
+            <!-- Contact details -->
+            <div class="flex-1 text-center md:text-left">
+                <h4 class="text-2xl font-bold text-primary mb-2">Let’s Connect</h4>
+                <p class="text-gray-600 mb-4">Have a project or question? Reach out — we’re ready to collaborate and help your ideas ascend.</p>
+
+                <div class="flex flex-col sm:flex-row sm:items-center sm:gap-6">
+                    <a href="mailto:hello@mount360.co" class="flex items-center gap-3 text-gray-700 hover:text-primary transition">
+                        <svg data-lucide="mail" class="w-5 h-5"></svg>
+                        <span class="text-sm font-medium">mount360@gmail.com</span>
+                    </a>
+
+                    <a href="tel:+1234567890" class="flex items-center gap-3 text-gray-700 hover:text-primary transition">
+                        <svg data-lucide="phone" class="w-5 h-5"></svg>
+                        <span class="text-sm font-medium">+266 2232 3239</span>
+                    </a>
+                </div>
+
+                <div class="mt-4 text-sm text-gray-500">
+                    <div class="flex items-center gap-2">
+                        <svg data-lucide="map-pin" class="w-4 h-4"></svg>
+                        <span>Moonstar complex, Room 09</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA + Social -->
+            <div class="flex flex-col items-center md:items-end gap-4">
+                <a href="contact.html" class="inline-block px-6 py-3 bg-accent text-primary font-semibold rounded-lg shadow hover:shadow-lg transition">
+                    Book a Consultation
+                </a>
+
+                <div class="flex items-center gap-3">
+                    <a href="#" aria-label="Facebook" class="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition">
+                        <svg data-lucide="facebook" class="w-5 h-5"></svg>
+                    </a>
+                    <a href="#" aria-label="Twitter" class="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition">
+                        <svg data-lucide="twitter" class="w-5 h-5"></svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn" class="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition">
+                        <svg data-lucide="linkedin" class="w-5 h-5"></svg>
+                    </a>
+                    <a href="#" aria-label="Instagram" class="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition">
+                        <svg data-lucide="instagram" class="w-5 h-5"></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- NEW: Footer replaced per your request (only footer changed) -->
+<footer class="bg-primary text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+
+        <!-- Logo & Tagline -->
+        <div>
+            <img src="WhatsApp Image 2025-10-28 at 4.03.55 PM.jpeg" alt="Mount360 Creative House Logo"
+                 class="h-12 w-auto mx-auto md:mx-0 rounded-md mb-4">
+            <h3 class="text-xl font-bold mb-2">Mount360 Creative House</h3>
+            <p class="text-gray-200 text-sm">Elevating businesses through strategic design and innovative consulting.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+            <h4 class="font-semibold text-lg mb-3">Quick Links</h4>
+            <ul class="space-y-2 text-gray-200 text-sm">
+                <li><a href="about.html" class="hover:text-accent transition">About Us</a></li>
+                <li><a href="services.html" class="hover:text-accent transition">Services</a></li>
+                <li><a href="portfolio.html" class="hover:text-accent transition">Portfolio</a></li>
+            </ul>
+        </div>
+
+        <!-- Legal -->
+        <div>
+            <h4 class="font-semibold text-lg mb-3">Legal</h4>
+            <ul class="space-y-2 text-gray-200 text-sm">
+                <li><a href="#" class="hover:text-accent transition">Privacy Policy</a></li>
+                <li><a href="#" class="hover:text-accent transition">Terms of Service</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+            <h4 class="font-semibold text-lg mb-3">Contact</h4>
+            <p class="text-gray-200 text-sm">📞 +266 2232 3239</p>
+            <p class="text-gray-200 text-sm mt-2">📧 mount360@gmail.com</p>
+            <p class="text-gray-200 text-sm mt-2">📍 Moonstar complex, Room 09</p>
+        </div>
+    </div>
+
+    <div class="border-t border-white/20 mt-8 pt-4 text-center text-gray-300 text-sm">
+        © 2025 Mount360 Creative House. All rights reserved.
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script>
+    lucide.createIcons();
+
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => { link.addEventListener('click', () => { mobileMenu.classList.add('hidden'); }); });
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

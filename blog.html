@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mount360 Creative House - Blog</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- External custom styles -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="antialiased text-gray-800">
+
+<!-- Navbar -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+        <a href="index.html" class="flex items-center space-x-2">
+            <img src="WhatsApp Image 2025-10-28 at 4.03.55 PM.jpeg" alt="Mount360 Creative House Logo"
+                 class="h-10 w-auto rounded-md"
+                 onerror="this.onerror=null; this.src='https://placehold.co/40x40/101D38/00C9B1?text=M360'">
+            <span class="text-xl font-extrabold text-primary hidden sm:block">Mount360</span>
+        </a>
+
+        <nav class="hidden md:flex space-x-8 font-medium">
+            <a href="index.html" class="text-primary hover:text-accent transition duration-300">Home</a>
+            <a href="services.html" class="text-primary hover:text-accent transition duration-300">Services</a>
+            <a href="portfolio.html" class="text-primary hover:text-accent transition duration-300">Portfolio</a>
+            <a href="about.html" class="text-primary hover:text-accent transition duration-300">About Us</a>
+            <a href="contact.html" class="text-primary hover:text-accent transition duration-300">Contact</a>
+            <a href="blog.html" class="text-accent font-semibold transition duration-300">Blog</a>
+        </nav>
+
+        <button id="mobile-menu-button" class="md:hidden text-primary focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu">
+                <line x1="4" x2="20" y1="12" y2="12" />
+                <line x1="4" x2="20" y1="6" y2="6" />
+                <line x1="4" x2="20" y1="18" y2="18" />
+            </svg>
+        </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg pb-4">
+        <a href="index.html" class="block px-4 py-2 text-primary hover:bg-gray-100">Home</a>
+        <a href="services.html" class="block px-4 py-2 text-primary hover:bg-gray-100">Services</a>
+        <a href="portfolio.html" class="block px-4 py-2 text-primary hover:bg-gray-100">Portfolio</a>
+        <a href="about.html" class="block px-4 py-2 text-primary hover:bg-gray-100">About Us</a>
+        <a href="contact.html" class="block px-4 py-2 text-primary hover:bg-gray-100">Contact</a>
+        <a href="blog.html" class="block px-4 py-2 text-primary hover:bg-gray-100">Blog</a>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="relative min-h-[50vh] md:min-h-[60vh] flex items-center justify-center text-center">
+    <!-- Background Image (with blur and dim overlay) -->
+    <div class="absolute inset-0">
+        <img src="WhatsApp Image 2025-10-28 at 4.03.55 PM.jpeg" alt="Background"
+             class="w-full h-full object-center filter blur-sm brightness-75">
+    </div>
+    <div class="absolute inset-0 bg-purple/60"></div>
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-800/60 via-purple-700/40 to-pink-800/50 mix-blend-multiply"></div>
+
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 text-white">
+            Our Insights & Articles
+        </h1>
+        <p class="text-lg sm:text-xl lg:text-2xl mb-8 font-light max-w-3xl mx-auto text-gray-200">
+            Fuel your creativity with stories, strategies, and design wisdom straight from the minds behind Mount360 Creative House. From fresh branding ideas to digital transformation insights — here’s where inspiration meets innovation.
+        </p>
+
+        <!-- Quick Access Tabs -->
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="services.html" class="flex items-center justify-center w-12 h-12 bg-accent text-primary rounded-lg shadow-lg hover:w-40 transition-all duration-300 overflow-hidden">
+                <svg data-lucide="settings" class="w-6 h-6 group-hover:text-white transition-colors duration-300"></svg>
+                <span class="ml-2 whitespace-nowrap opacity-0 hover:opacity-100 transition duration-300 font-semibold">Services</span>
+            </a>
+            <a href="portfolio.html" class="flex items-center justify-center w-12 h-12 bg-accent text-primary rounded-lg shadow-lg hover:w-40 transition-all duration-300 overflow-hidden">
+                <svg data-lucide="image" class="w-6 h-6 group-hover:text-white transition-colors duration-300"></svg>
+                <span class="ml-2 whitespace-nowrap opacity-0 hover:opacity-100 transition duration-300 font-semibold">Portfolio</span>
+            </a>
+            <a href="about.html" class="flex items-center justify-center w-12 h-12 bg-accent text-primary rounded-lg shadow-lg hover:w-40 transition-all duration-300 overflow-hidden">
+                <svg data-lucide="users" class="w-6 h-6 group-hover:text-white transition-colors duration-300"></svg>
+                <span class="ml-2 whitespace-nowrap opacity-0 hover:opacity-100 transition duration-300 font-semibold">About Us</span>
+            </a>
+            <a href="contact.html" class="flex items-center justify-center w-12 h-12 bg-accent text-primary rounded-lg shadow-lg hover:w-40 transition-all duration-300 overflow-hidden">
+                <svg data-lucide="mail" class="w-6 h-6 group-hover:text-white transition-colors duration-300"></svg>
+                <span class="ml-2 whitespace-nowrap opacity-0 hover:opacity-100 transition duration-300 font-semibold">Contact</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Blog Grid -->
+<section class="section-padding bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">Latest Blog Posts</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Blog Post 1 -->
+            <div class="p-6 border border-gray-200 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1 hover:scale-105">
+                <div class="flex items-center justify-center mb-4 w-12 h-12 mx-auto rounded-full bg-primary/10 text-accent">
+                    <svg data-lucide="trending-up" class="w-6 h-6"></svg>
+                </div>
+                <h3 class="text-xl font-bold text-primary mb-2">Innovative Strategy Trends 2025</h3>
+                <p class="text-gray-600 text-sm mb-4">Discover emerging strategies that are shaping the future of business consulting.</p>
+                <a href="#" class="text-accent font-semibold hover:underline">Read More →</a>
+            </div>
+            <!-- Blog Post 2 -->
+            <div class="p-6 border border-gray-200 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1 hover:scale-105">
+                <div class="flex items-center justify-center mb-4 w-12 h-12 mx-auto rounded-full bg-primary/10 text-accent">
+                    <svg data-lucide="cpu" class="w-6 h-6"></svg>
+                </div>
+                <h3 class="text-xl font-bold text-primary mb-2">Digital Transformation Insights</h3>
+                <p class="text-gray-600 text-sm mb-4">How technology is transforming the way businesses operate in the digital age.</p>
+                <a href="#" class="text-accent font-semibold hover:underline">Read More →</a>
+            </div>
+            <!-- Blog Post 3 -->
+            <div class="p-6 border border-gray-200 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1 hover:scale-105">
+                <div class="flex items-center justify-center mb-4 w-12 h-12 mx-auto rounded-full bg-primary/10 text-accent">
+                    <svg data-lucide="pen-tool" class="w-6 h-6"></svg>
+                </div>
+                <h3 class="text-xl font-bold text-primary mb-2">Branding Secrets for Startups</h3>
+                <p class="text-gray-600 text-sm mb-4">Tips and strategies to build a strong brand identity from the ground up.</p>
+                <a href="#" class="text-accent font-semibold hover:underline">Read More →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-primary text-white py-12 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        &copy; <span id="current-year"></span> Mount360 Creative House. All rights reserved.
+    </div>
+</footer>
+
+<script>
+    lucide.createIcons();
+
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

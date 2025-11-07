@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Mount360 Creative House</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="antialiased text-gray-800">
+
+<!-- Navbar -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+        <a href="index.html" class="flex items-center space-x-2">
+            <img src="WhatsApp Image 2025-10-28 at 4.03.55 PM.jpeg" alt="Mount360 Logo" class="h-10 w-auto rounded-md">
+            <span class="text-xl font-extrabold text-primary hidden sm:block">Mount360</span>
+        </a>
+        <nav class="hidden md:flex space-x-8 font-medium">
+            <a href="index.html" class="text-primary hover:text-accent transition duration-300">Home</a>
+            <a href="services.html" class="text-primary hover:text-accent transition duration-300">Services</a>
+            <a href="portfolio.html" class="text-primary hover:text-accent transition duration-300">Portfolio</a>
+            <a href="about.html" class="text-primary hover:text-accent transition duration-300">About Us</a>
+            <a href="contact.html" class="text-primary hover:text-accent transition duration-300">Contact</a>
+            <a href="blog.html" class="text-primary hover:text-accent transition duration-300">Blog</a>
+        </nav>
+        <button id="mobile-menu-button" class="md:hidden text-primary focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                 class="lucide lucide-menu">
+                <line x1="4" x2="20" y1="12" y2="12"/>
+                <line x1="4" x2="20" y1="6" y2="6"/>
+                <line x1="4" x2="20" y1="18" y2="18"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg pb-4">
+        <a href="index.html" class="block px-4 py-2 text-primary hover:bg-gray-100">Home</a>
+        <a href="services.html" class="block px-4 py-2 text-primary hover:bg-gray-100">Services</a>
+        <a href="portfolio.html" class="block px-4 py-2 text-primary hover:bg-gray-100">Portfolio</a>
+        <a href="about.html" class="block px-4 py-2 text-primary hover:bg-gray-100">About Us</a>
+        <a href="contact.html" class="block px-4 py-2 text-primary hover:bg-gray-100">Contact</a>
+        <a href="blog.html" class="block px-4 py-2 text-primary hover:bg-gray-100">Blog</a>
+    </div>
+</header>
+
+<!-- Contact Hero Section -->
+<section class="relative section-padding min-h-[50vh] flex flex-col items-center justify-center overflow-hidden">
+    <!-- Background Image -->
+    <div class="absolute inset-0">
+        <img src="WhatsApp Image 2025-10-28 at 4.03.55 PM.jpeg"
+             alt="Background"
+             class="w-full h-full object-center filter brightness-70 scale-105">
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-800/60 via-purple-700/40 to-pink-800/50 mix-blend-multiply"></div>
+
+    <div class="text-center relative z-10">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-4 text-white">Contact Us</h1>
+        <p class="text-lg md:text-xl text-gray-100 max-w-2xl mx-auto mb-8">
+            Here at Mount360, we believe that creativity and strategy are the cornerstones of true innovation. Our mission is to transform ideas into impactful realities shaping brands, empowering businesses, and inspiring audiences across the globe. Start your project with Mount360 today and bring your vision to life.
+        </p>
+
+        <!-- Our Assistants Main Tab -->
+        <div class="mb-6">
+            <button id="assistants-toggle" class="px-6 py-3 bg-accent text-white font-bold rounded-lg shadow hover:bg-opacity-90 transition">
+                Our Assistants
+            </button>
+        </div>
+
+        <!-- Multi-Agent Panel -->
+        <div id="assistants-panel" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out flex flex-col md:flex-row justify-center gap-4 flex-wrap z-50">
+            <button class="agent-tab px-4 py-2 bg-primary/80 text-white font-bold rounded-lg shadow hover:bg-primary transition" data-agent="1">Khang</button>
+            <button class="agent-tab px-4 py-2 bg-primary/80 text-white font-bold rounded-lg shadow hover:bg-primary transition" data-agent="2">John</button>
+            <button class="agent-tab px-4 py-2 bg-primary/80 text-white font-bold rounded-lg shadow hover:bg-primary transition" data-agent="3">Lerato</button>
+            <button class="agent-tab px-4 py-2 bg-primary/80 text-white font-bold rounded-lg shadow hover:bg-primary transition" data-agent="4">Marco</button>
+            <button class="agent-tab px-4 py-2 bg-primary/80 text-white font-bold rounded-lg shadow hover:bg-primary transition" data-agent="5">Ngobese</button>
+        </div>
+    </div>
+</section>
+
+<!-- Agent Popups (Outside hero, fixed, z-index) -->
+<div class="fixed inset-0 flex justify-center items-start pt-32 pointer-events-none z-[999]">
+    <!-- Agent 1 -->
+    <div class="agent-popup hidden bg-white rounded-xl shadow-lg p-6 text-center transition-all duration-300 ease-in-out opacity-0 scale-95 pointer-events-auto w-80" id="agent-1">
+        <img src="assistant2.jpg" alt="Khang" class="w-24 h-24 rounded-full mb-4 shadow-lg object-cover mx-auto">
+        <h3 class="font-bold text-lg mb-2">Karabo Khang</h3>
+        <p class="text-gray-600 mb-2">Specialties: Branding, Digital Strategy</p>
+        <p class="text-gray-500 text-sm mb-4">Available: Mon-Fri 9am-5pm</p>
+        <div class="flex gap-4 justify-center">
+            <a href="tel:+26622323239" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">Call</a>
+            <a href="#" class="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition">Leave Review</a>
+        </div>
+    </div>
+
+    <!-- Agent 2 -->
+    <div class="agent-popup hidden bg-white rounded-xl shadow-lg p-6 text-center transition-all duration-300 ease-in-out opacity-0 scale-95 pointer-events-auto w-80" id="agent-2">
+        <img src="assistant2.jpg" alt="Molapo" class="w-24 h-24 rounded-full mb-4 shadow-lg object-cover mx-auto">
+        <h3 class="font-bold text-lg mb-2">John Molapo</h3>
+        <p class="text-gray-600 mb-2">Specialties: Web Development, SEO</p>
+        <p class="text-gray-500 text-sm mb-4">Available: Mon-Fri 10am-6pm</p>
+        <div class="flex gap-4 justify-center">
+            <a href="tel:+26622323240" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">Call</a>
+            <a href="#" class="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition">Leave Review</a>
+        </div>
+    </div>
+
+    <!-- Agent 3 -->
+    <div class="agent-popup hidden bg-white rounded-xl shadow-lg p-6 text-center transition-all duration-300 ease-in-out opacity-0 scale-95 pointer-events-auto w-80" id="agent-3">
+        <img src="assistant3.jpg" alt="Lerato" class="w-24 h-24 rounded-full mb-4 shadow-lg object-cover mx-auto">
+        <h3 class="font-bold text-lg mb-2">Lerato Patlo</h3>
+        <p class="text-gray-600 mb-2">Specialties: UX/UI Design, Product Strategy</p>
+        <p class="text-gray-500 text-sm mb-4">Available: Mon-Fri 8am-4pm</p>
+        <div class="flex gap-4 justify-center">
+            <a href="tel:+26622323241" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">Call</a>
+            <a href="#" class="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition">Leave Review</a>
+        </div>
+    </div>
+
+    <!-- Agent 4 -->
+    <div class="agent-popup hidden bg-white rounded-xl shadow-lg p-6 text-center transition-all duration-300 ease-in-out opacity-0 scale-95 pointer-events-auto w-80" id="agent-4">
+        <img src="assistant4.jpg" alt="Marco" class="w-24 h-24 rounded-full mb-4 shadow-lg object-cover mx-auto">
+        <h3 class="font-bold text-lg mb-2">Marco Leuta</h3>
+        <p class="text-gray-600 mb-2">Specialties: Marketing, Social Media</p>
+        <p class="text-gray-500 text-sm mb-4">Available: Mon-Fri 9am-5pm</p>
+        <div class="flex gap-4 justify-center">
+            <a href="tel:+26622323242" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">Call</a>
+            <a href="#" class="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition">Leave Review</a>
+        </div>
+    </div>
+
+    <!-- Agent 5 -->
+    <div class="agent-popup hidden bg-white rounded-xl shadow-lg p-6 text-center transition-all duration-300 ease-in-out opacity-0 scale-95 pointer-events-auto w-80" id="agent-5">
+        <img src="assistant5.jpg" alt="Ngobese" class="w-24 h-24 rounded-full mb-4 shadow-lg object-cover mx-auto">
+        <h3 class="font-bold text-lg mb-2">Ngobese Molapo</h3>
+        <p class="text-gray-600 mb-2">Specialties: Project Management, Consulting</p>
+        <p class="text-gray-500 text-sm mb-4">Available: Mon-Fri 10am-6pm</p>
+        <div class="flex gap-4 justify-center">
+            <a href="tel:+26622323243" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">Call</a>
+            <a href="#" class="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700 transition">Leave Review</a>
+        </div>
+    </div>
+</div>
+
+<!-- Contact Form -->
+<main class="section-padding max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <form action="#" method="POST" class="space-y-6 bg-gray-50 p-8 rounded-xl shadow-lg mt-12">
+        <div>
+            <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+            <input type="text" name="name" id="name" required
+                   class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 focus:border-accent focus:ring-accent border">
+        </div>
+        <div>
+            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+            <input type="email" name="email" id="email" required
+                   class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 focus:border-accent focus:ring-accent border">
+        </div>
+        <div class="relative">
+            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+            <textarea id="message" name="message" rows="4" required
+                      class="mt-1 block w-full rounded-md border-gray-300 shadow-sm p-3 focus:border-accent focus:ring-accent border pr-12 transition"></textarea>
+            <!-- Animated Plus Attach Button -->
+            <div class="absolute top-3 right-3">
+                <button type="button" 
+                        class="bg-accent hover:bg-accent/90 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg transition-transform transform hover:scale-110 hover:shadow-xl group relative">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="5" x2="12" y2="19"/>
+                        <line x1="5" y1="12" x2="19" y2="12"/>
+                    </svg>
+                    <!-- Tooltip -->
+                    <div class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs rounded-md px-3 py-1 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap shadow-md">
+                        Attach files, photos, or documents
+                    </div>
+                </button>
+            </div>
+        </div>
+        <div>
+            <button type="submit"
+                    class="w-full py-3 px-4 bg-accent text-primary font-bold rounded-md shadow hover:bg-opacity-90 transition">
+                Send Message
+            </button>
+        </div>
+    </form>
+</main>
+
+<!-- Footer -->
+<footer class="bg-primary text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+
+        <!-- Logo & Tagline -->
+        <div>
+            <img src="WhatsApp Image 2025-10-28 at 4.03.55 PM.jpeg" alt="Mount360 Logo"
+                 class="h-12 w-auto mx-auto md:mx-0 rounded-md mb-4">
+            <h3 class="text-xl font-bold mb-2">Mount360 Creative House</h3>
+            <p class="text-gray-200 text-sm">Elevating businesses through strategic design and innovative consulting.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+            <h4 class="font-semibold text-lg mb-3">Quick Links</h4>
+            <ul class="space-y-2 text-gray-200 text-sm">
+                <li><a href="about.html" class="hover:text-accent transition">About Us</a></li>
+                <li><a href="services.html" class="hover:text-accent transition">Services</a></li>
+                <li><a href="portfolio.html" class="hover:text-accent transition">Portfolio</a></li>
+            </ul>
+        </div>
+
+        <!-- Legal -->
+        <div>
+            <h4 class="font-semibold text-lg mb-3">Legal</h4>
+            <ul class="space-y-2 text-gray-200 text-sm">
+                <li><a href="#" class="hover:text-accent transition">Privacy Policy</a></li>
+                <li><a href="#" class="hover:text-accent transition">Terms of Service</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+            <h4 class="font-semibold text-lg mb-3">Contact</h4>
+            <p class="text-gray-200 text-sm">📞 +266 2232 3239</p>
+            <p class="text-gray-200 text-sm mt-2">📧 mount360@gmail.com</p>
+            <p class="text-gray-200 text-sm mt-2">📍 Moonstar complex, Room 09</p>
+        </div>
+
+    </div>
+
+    <div class="border-t border-white/20 mt-8 pt-4 text-center text-gray-300 text-sm">
+        &copy; <span id="current-year"></span> Mount360 Creative House. All rights reserved.
+    </div>
+</footer>
+
+<script>
+    lucide.createIcons();
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => { link.addEventListener('click', () => { mobileMenu.classList.add('hidden'); }); });
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // Assistants panel toggle
+    const assistantsToggle = document.getElementById('assistants-toggle');
+    const assistantsPanel = document.getElementById('assistants-panel');
+    assistantsToggle.addEventListener('click', () => {
+        if (assistantsPanel.style.maxHeight && assistantsPanel.style.maxHeight !== "0px") {
+            assistantsPanel.style.maxHeight = "0px";
+        } else {
+            assistantsPanel.style.maxHeight = assistantsPanel.scrollHeight + "px";
+        }
+    });
+
+    // Multi-agent popup hover behavior
+    const agentTabs = document.querySelectorAll('.agent-tab');
+    const popups = document.querySelectorAll('.agent-popup');
+
+    agentTabs.forEach(tab => {
+        tab.addEventListener('mouseenter', () => {
+            // Hide all popups
+            popups.forEach(p => {
+                p.classList.add('hidden', 'opacity-0', 'scale-95');
+                p.classList.remove('opacity-100', 'scale-100');
+            });
+            // Show the hovered agent
+            const id = tab.getAttribute('data-agent');
+            const popup = document.getElementById(`agent-${id}`);
+            popup.classList.remove('hidden', 'opacity-0', 'scale-95');
+            popup.classList.add('opacity-100', 'scale-100');
+        });
+    });
+
+    // Close popups when cursor leaves all tabs and popups
+    document.addEventListener('mousemove', (e) => {
+        const isOverTabOrPopup = [...agentTabs, ...popups].some(el => el.contains(e.target));
+        if (!isOverTabOrPopup) {
+            popups.forEach(p => {
+                p.classList.add('hidden', 'opacity-0', 'scale-95');
+                p.classList.remove('opacity-100', 'scale-100');
+            });
+        }
+    });
+</script>
+
+</body>
+</html>

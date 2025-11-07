@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mount360 Creative House - Full-Service Consultancy</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS Animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="antialiased text-gray-800">
+
+<!-- Navbar -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+        <a href="#hero" class="flex items-center space-x-2">
+            <img src="WhatsApp Image 2025-10-28 at 4.03.55 PM.jpeg" alt="Mount360 Logo"
+                 class="h-10 w-auto rounded-md"
+                 onerror="this.onerror=null; this.src='https://placehold.co/40x40/101D38/00C9B1?text=M360'">
+            <span class="text-xl font-extrabold text-primary hidden sm:block">Mount360</span>
+        </a>
+
+       <nav class="hidden md:flex space-x-8 font-medium items-center">
+           <a href="#hero" class="nav-link">Home</a>
+           <a href="#services" class="nav-link">Services</a>
+           <a href="#portfolio" class="nav-link">Portfolio</a>
+           <a href="#about" class="nav-link">About Us</a>
+           <a href="#contact" class="nav-link">Contact</a>
+           <a href="blog.html" class="nav-link">Blog</a>
+
+           <!-- New Button -->
+           <a href="#contact" class="btn-partner flex items-center px-4 py-2 rounded-lg font-semibold text-primary transition duration-300 group">
+                <span>Become a Business Partner</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+            </a>
+        </nav>
+
+        <button id="mobile-menu-button" class="md:hidden text-primary focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu">
+                <line x1="4" x2="20" y1="12" y2="12" />
+                <line x1="4" x2="20" y1="6" y2="6" />
+                <line x1="4" x2="20" y1="18" y2="18" />
+            </svg>
+        </button>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg pb-4">
+        <a href="#hero" class="block px-4 py-2 text-primary hover:bg-gray-100">Home</a>
+        <a href="#services" class="block px-4 py-2 text-primary hover:bg-gray-100">Services</a>
+        <a href="#portfolio" class="block px-4 py-2 text-primary hover:bg-gray-100">Portfolio</a>
+        <a href="#about" class="block px-4 py-2 text-primary hover:bg-gray-100">About Us</a>
+        <a href="#contact" class="block px-4 py-2 text-primary hover:bg-gray-100">Contact</a>
+        <a href="blog.html" class="block px-4 py-2 text-primary hover:bg-gray-100">Blog</a>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="relative min-h-[80vh] flex items-center hero-bg" id="hero">
+
+    <!-- Moving Parallax Circles -->
+    <div class="parallax-circle circle-small bg-accent top-20 left-10"></div>
+    <div class="parallax-circle circle-medium bg-accent top-1/3 right-16"></div>
+    <div class="parallax-circle circle-large bg-accent top-1/2 left-1/2"></div>
+    <div class="parallax-circle circle-small bg-accent bottom-32 right-32"></div>
+
+    <!-- Hero Content -->
+    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center h-full hero-content">
+        <div class="text-white max-w-2xl" data-aos="fade-right">
+            <!-- Regional Coverage -->
+            <p class="uppercase tracking-widest text-sm mb-2 opacity-80">
+                South Africa | Namibia | Botswana | Eswatini | Lesotho
+            </p>
+
+            <!-- Main Heading -->
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight">
+                Professional Marketing & Tech Solutions
+            </h1>
+
+            <!-- Description -->
+            <p class="text-lg sm:text-xl lg:text-2xl mb-6 text-gray-200">
+                Mount360 Creative House builds and elevates brands by offering a full suite of marketing, strategy, and tech solutions across Sub-Saharan Africa.
+            </p>
+
+            <!-- Professional Find Out More Button -->
+            <a href="#services" class="hero-btn" data-aos="fade-up">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+                Find Out More
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="section-padding bg-white" id="services">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 data-aos="fade-up" class="text-3xl md:text-4xl font-bold text-primary mb-12">Our Core Services</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div data-aos="fade-up" class="p-6 border rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
+                <div class="text-accent mb-4 mx-auto w-12 h-12 flex items-center justify-center rounded-full bg-primary/10">
+                    <svg data-lucide="compass" class="w-6 h-6"></svg>
+                </div>
+                <h3 class="text-xl font-bold text-primary mb-2">Strategy & Consulting</h3>
+                <p class="text-gray-600 text-sm">Crafting scalable roadmaps, market analysis, and business strategies for sustainable growth.</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="100" class="p-6 border rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
+                <div class="text-accent mb-4 mx-auto w-12 h-12 flex items-center justify-center rounded-full bg-primary/10">
+                    <svg data-lucide="palette" class="w-6 h-6"></svg>
+                </div>
+                <h3 class="text-xl font-bold text-primary mb-2">Branding & Design</h3>
+                <p class="text-gray-600 text-sm">Forging powerful brand identities and visual assets that resonate with your audience.</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200" class="p-6 border rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
+                <div class="text-accent mb-4 mx-auto w-12 h-12 flex items-center justify-center rounded-full bg-primary/10">
+                    <svg data-lucide="code" class="w-6 h-6"></svg>
+                </div>
+                <h3 class="text-xl font-bold text-primary mb-2">Digital Solutions</h3>
+                <p class="text-gray-600 text-sm">Developing modern, responsive websites, apps, and backend infrastructure.</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="300" class="p-6 border rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
+                <div class="text-accent mb-4 mx-auto w-12 h-12 flex items-center justify-center rounded-full bg-primary/10">
+                    <svg data-lucide="megaphone" class="w-6 h-6"></svg>
+                </div>
+                <h3 class="text-xl font-bold text-primary mb-2">Marketing & Outreach</h3>
+                <p class="text-gray-600 text-sm">Executing data-driven campaigns, SEO, content strategy, and public relations.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Section -->
+<section class="section-padding bg-gray-50" id="portfolio">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 data-aos="fade-up" class="text-3xl md:text-4xl font-bold text-primary mb-12">Portfolio Highlights</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div data-aos="fade-up" class="border rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
+                <img src="ux-indonesia-pqzRfBhd9r0-unsplash.jpg" alt="Project Alpha" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex items-center justify-center mb-3">
+                        <svg data-lucide="award" class="w-6 h-6 text-accent mr-2"></svg>
+                        <h3 class="text-xl font-bold mb-2 inline">Project Alpha</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm">Branding and digital transformation for a startup.</p>
+                </div>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="100" class="border rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
+                <img src="louise-viallesoubranne-5EhN4wbfvBc-unsplash.jpg" alt="Project Beta" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex items-center justify-center mb-3">
+                        <svg data-lucide="bar-chart-2" class="w-6 h-6 text-accent mr-2"></svg>
+                        <h3 class="text-xl font-bold mb-2 inline">Project Beta</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm">Comprehensive marketing strategy for an enterprise.</p>
+                </div>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200" class="border rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
+                <img src="annie-spratt-QckxruozjRg-unsplash.jpg" alt="Project Gamma" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <div class="flex items-center justify-center mb-3">
+                        <svg data-lucide="monitor" class="w-6 h-6 text-accent mr-2"></svg>
+                        <h3 class="text-xl font-bold mb-2 inline">Project Gamma</h3>
+                    </div>
+                    <p class="text-gray-600 text-sm">Website and app development for a tech innovator.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sponsor Logo Carousel (UPDATED: added subheading trigger above carousel) -->
+<section class="section-padding bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- SUBHEADING — hover this to start the sliding logos -->
+    <h3 tabindex="0"
+        class="sponsor-trigger text-center text-2xl font-semibold mb-6 cursor-pointer hover:text-accent focus:outline-none">
+      Crafting and promoting businesses — The Brand Principals We Represent (hover to view)
+    </h3>
+
+    <!-- The carousel will only animate when the sponsor-trigger is hovered or focused -->
+    <div class="relative overflow-hidden sponsor-mask py-6">
+        <div class="flex space-x-12 animate-scroll" data-aos="fade-up" data-aos-delay="200" aria-hidden="false">
+            <!-- Circular Fake Logos -->
+            <img src="https://placehold.co/120x120?text=Meerlust" alt="Meerlust Logo" class="logo rounded-full">
+            <img src="https://placehold.co/120x120?text=Jacobs" alt="Jacobs Logo" class="logo rounded-full">
+            <img src="https://placehold.co/120x120?text=Adcock" alt="Adcock Logo" class="logo rounded-full">
+            <img src="https://placehold.co/120x120?text=JDE" alt="JDE Logo" class="logo rounded-full">
+            <img src="https://placehold.co/120x120?text=PepsiCo" alt="PepsiCo Logo" class="logo rounded-full">
+            <img src="https://placehold.co/120x120?text=Simba" alt="Simba Logo" class="logo rounded-full">
+            <img src="https://placehold.co/120x120?text=Sanulac" alt="Sanulac Logo" class="logo rounded-full">
+            <img src="https://placehold.co/120x120?text=Bostea" alt="Bostea Logo" class="logo rounded-full">
+            <img src="https://placehold.co/120x120?text=Heineken" alt="Heineken Logo" class="logo rounded-full">
+            <img src="https://placehold.co/120x120?text=Diageo" alt="Diageo Logo" class="logo rounded-full">
+            <!-- Repeat for seamless scroll -->
+            <img src="https://placehold.co/120x120?text=Meerlust" alt="Meerlust Logo" class="logo rounded-full">
+            <img src="https://placehold.co/120x120?text=Jacobs" alt="Jacobs Logo" class="logo rounded-full">
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEW SECTION: Our Distribution Reach (charts instead of map) -->
+<section id="distribution-reach" class="section-padding bg-white" data-aos="fade-up">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-8">
+      <h2 class="text-3xl md:text-4xl font-bold text-primary">Our Distribution Reach</h2>
+      <p class="text-gray-600 mt-2 max-w-2xl mx-auto">
+        Companies we’ve worked with across the region and the locations of our branches. Company locations are shown in <span class="font-semibold text-accent">teal</span>; our branch locations are shown in <span class="font-semibold text-primary">white with teal outline</span>.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+      <!-- Left: short explanation / list -->
+      <div class="space-y-4">
+        <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
+          <h3 class="font-semibold text-lg mb-2">Summary</h3>
+          <p class="text-sm text-gray-600">
+            We distribute products and provide marketing & tech support through a network of partner companies across Lesotho and the wider region. The charts (center) visualize our area coverage and branch vs partner breakdown.
+          </p>
+        </div>
+
+        <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
+          <h4 class="font-semibold mb-2">Legend</h4>
+          <div class="flex items-center gap-4">
+            <div class="w-4 h-4 rounded-full bg-accent border border-accent"></div>
+            <div class="text-sm text-gray-600">Company locations (partners)</div>
+          </div>
+          <div class="flex items-center gap-4 mt-2">
+            <div class="w-4 h-4 rounded-full bg-white border-2 border-accent"></div>
+            <div class="text-sm text-gray-600">Branch locations</div>
+          </div>
+        </div>
+
+        <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
+          <h4 class="font-semibold mb-2">Locations (sample)</h4>
+          <ul class="text-sm text-gray-600 list-inside list-disc">
+            <li>Maseru — Partner retailers & distributors</li>
+            <li>Berea — Key trade points</li>
+            <li>Leribe — Regional distribution</li>
+            <li>Mokhotlong — Coverage & deliveries</li>
+            <li>Maputsoe — Branch support</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Center: charts -->
+      <div class="relative rounded-xl overflow-hidden shadow-lg bg-gray-100 p-6">
+        <div class="grid grid-cols-1 gap-6 lg:grid-cols-2 items-center">
+          <div class="text-center">
+            <h4 class="font-semibold mb-4">Coverage by Country / Region</h4>
+            <canvas id="coverageChart" class="mx-auto" style="max-width:320px;"></canvas>
+            <p class="text-xs text-gray-500 mt-2">Sample: update counts to reflect real data.</p>
+          </div>
+
+          <div class="text-center">
+            <h4 class="font-semibold mb-4">Partners vs Branches</h4>
+            <canvas id="typeChart" class="mx-auto" style="max-width:260px;"></canvas>
+            <p class="text-xs text-gray-500 mt-2">Proportion of partners (companies) vs our own branches.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: contact CTA -->
+      <div class="space-y-4">
+        <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
+          <h3 class="font-semibold text-lg mb-2">Need distribution support?</h3>
+          <p class="text-sm text-gray-600 mb-4">If your company needs marketing, distribution or trade support in Lesotho, reach out — we’ll recommend the right local partners or open a branch if needed.</p>
+          <a href="#contact" class="inline-flex items-center gap-2 px-4 py-2 border border-accent rounded-lg hover:bg-accent/10 transition text-sm">
+            Contact our Distribution Team
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
+          <h4 class="font-semibold mb-2">Export & Logistics</h4>
+          <p class="text-sm text-gray-600">We coordinate last-mile delivery, stock forecasting and promotional distribution with our regional partners to keep shelves stocked and promotions effective.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Small note -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-xs text-gray-400 mt-6">
+    * Charts show sample/demo data. Replace the numbers in the JS below with real counts for accurate reporting.
+  </div>
+</section>
+
+<!-- About Us + Contact Form Section (Moved to Bottom, Enhanced Button) -->
+<section id="about-contact" class="section-padding bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4" data-aos="fade-up">Where Ideas Ascend</h2>
+    <p class="text-gray-600 text-lg max-w-3xl mx-auto mb-6" data-aos="fade-up" data-aos-delay="100">
+      We are architects of innovation dedicated to forging market-leading strategies. Partner with us to achieve sustainable success and scale new heights. For more information click on the tab below; our 24-hour assistance is standing by to assist you.
+    </p>
+
+    <!-- Enhanced Learn More Button -->
+    <button id="learnMoreBtn"
+            class="inline-flex items-center justify-center mt-6 px-8 py-3 bg-accent text-primary font-bold rounded-lg shadow-lg hover:shadow-2xl hover:bg-accent/90 transform transition duration-300 scale-100 hover:scale-105 group"
+            data-aos="fade-up" data-aos-delay="200">
+      <span>Learn More About Us</span>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1 group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    </button>
+
+    <!-- Contact Form (Hidden by Default) -->
+    <div id="contactFormContainer" class="mt-8 bg-white rounded-xl shadow-lg p-6 max-w-2xl mx-auto hidden" data-aos="fade-up" data-aos-delay="300">
+      <form class="space-y-4">
+        <div>
+          <label for="fullName" class="block text-sm font-semibold text-gray-700 mb-1">Full Name</label>
+          <input type="text" id="fullName" name="fullName" placeholder="Your full name"
+                 class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-accent focus:border-accent transition">
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-semibold text-gray-700 mb-1">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com"
+                 class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-accent focus:border-accent transition">
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-semibold text-gray-700 mb-1">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Your message..."
+                    class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-accent focus:border-accent transition"></textarea>
+        </div>
+        <div class="flex items-center gap-2">
+          <label for="attachments" class="cursor-pointer flex items-center gap-1 text-accent hover:text-primary transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14m7-7H5"/>
+            </svg>
+            Attach Files
+          </label>
+          <input type="file" id="attachments" name="attachments" class="hidden" multiple>
+        </div>
+        <button type="submit"
+                class="w-full bg-primary text-white font-bold py-2 px-4 rounded-lg shadow hover:bg-primary/90 transition">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Confetti Canvas -->
+<canvas id="confettiCanvas" class="fixed inset-0 pointer-events-none z-40"></canvas>
+
+<!-- Footer -->
+<footer class="bg-primary text-white py-12" id="contact">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
+        <div>
+            <img src="WhatsApp Image 2025-10-28 at 4.03.55 PM.jpeg" alt="Mount360 Logo"
+                 class="h-12 w-auto mx-auto md:mx-0 rounded-md mb-4">
+            <h3 class="text-xl font-bold mb-2">Mount360 Creative House</h3>
+            <p class="text-gray-200 text-sm">Elevating businesses through strategic design and innovative consulting.</p>
+        </div>
+        <div>
+            <h4 class="font-semibold text-lg mb-3">Quick Links</h4>
+            <ul class="space-y-2 text-gray-200 text-sm">
+                <li><a href="#about" class="hover:text-accent transition">About Us</a></li>
+                <li><a href="#services" class="hover:text-accent transition">Services</a></li>
+                <li><a href="#portfolio" class="hover:text-accent transition">Portfolio</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="font-semibold text-lg mb-3">Legal</h4>
+            <ul class="space-y-2 text-gray-200 text-sm">
+                <li><a href="#" class="hover:text-accent transition">Privacy Policy</a></li>
+                <li><a href="#" class="hover:text-accent transition">Terms of Service</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="font-semibold text-lg mb-3">Contact</h4>
+            <p class="text-gray-200 text-sm">📍 Moonstar complex, Room 09</p>
+            <p class="text-gray-200 text-sm mt-2">📧 mount360@gmail.com</p>
+            <p class="text-gray-200 text-sm mt-2">📞 +266 2232 3239</p>
+        </div>
+    </div>
+
+    <div class="border-t border-white/20 mt-8 pt-4 text-center text-gray-300 text-sm">
+        © <span id="current-year"></span> Mount360 Creative House. All rights reserved.
+    </div>
+</footer>
+<!-- Modern Popup Modal -->
+<div id="popupModal" class="fixed inset-0 bg-black/40 flex items-center justify-center hidden z-50">
+  <div class="bg-white rounded-xl shadow-2xl p-6 max-w-sm mx-auto text-center transform scale-90 transition-transform duration-300">
+    <div class="text-4xl mb-4 animate-bounce">🎉</div>
+    <h2 class="text-xl font-bold text-primary mb-2">Thank You!</h2>
+    <p class="text-gray-600 mb-4">Your message has been sent. We'll get back to you shortly.</p>
+    <button id="closeModal" class="mt-2 px-4 py-2 bg-accent text-white font-semibold rounded-lg hover:bg-accent/90 transition">
+      Close
+    </button>
+  </div>
+</div>
+
+<!-- Scripts -->
+<!-- Chart.js for the pie/doughnut charts -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 800, once: true });
+    lucide.createIcons();
+
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // Optional: subtle scroll effect on hero content
+    const heroContent = document.querySelector('.hero-content');
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        if (heroContent) heroContent.style.transform = `translateY(${scrollY * -0.1}px)`;
+    });
+
+    /* ---------------------------
+       Chart: Coverage by Region
+       --------------------------- */
+    (function() {
+      const ctx = document.getElementById('coverageChart').getContext('2d');
+
+      // SAMPLE DATA — replace with your real numbers
+      const data = {
+        labels: ['Leribe', 'Butha-Buthe', 'Maseru', 'Mokhotlong', 'Morija', 'Oxbow'],
+        datasets: [{
+          label: 'Coverage',
+          data: [40, 10, 15, 5, 20, 10], // sample percentages / counts
+          backgroundColor: [
+            'rgba(6,147,227,0.9)', // blue
+            'rgba(0,201,177,0.9)', // teal
+            'rgba(155,81,224,0.9)', // purple
+            'rgba(255,157,88,0.9)', // orange
+            'rgba(16,29,56,0.9)',   // dark
+            'rgba(169,184,195,0.9)' // gray
+          ],
+          borderColor: '#fff',
+          borderWidth: 2,
+        }]
+      };
+
+      new Chart(ctx, {
+        type: 'doughnut',
+        data,
+        options: {
+          maintainAspectRatio: false,
+          responsive: true,
+          cutout: '45%',
+          plugins: {
+            legend: {
+              position: 'bottom',
+              labels: { usePointStyle: true, pointStyle: 'circle' }
+            },
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  const label = context.label || '';
+                  const value = context.formattedValue || context.raw;
+                  return label + ': ' + value + (isFinite(value) ? '%' : '');
+                }
+              }
+            }
+          }
+        }
+      });
+    })();
+
+    /* ---------------------------
+       Chart: Partners vs Branches
+       --------------------------- */
+    (function() {
+      const ctx2 = document.getElementById('typeChart').getContext('2d');
+
+      // SAMPLE DATA — replace counts with real values
+      const data2 = {
+        labels: ['Partners (Companies)', 'Our Branches'],
+        datasets: [{
+          data: [85, 15], // e.g. 85 partners, 15 branches (or percentages)
+          backgroundColor: [
+            'rgba(0,201,177,0.95)', // teal
+            'rgba(255,255,255,0.95)' // white (we'll add border to show it)
+          ],
+          borderColor: ['rgba(0,201,177,0.15)', '#00C9B1'],
+          borderWidth: [0, 2]
+        }]
+      };
+
+      new Chart(ctx2, {
+        type: 'pie',
+        data: data2,
+        options: {
+          maintainAspectRatio: false,
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'bottom',
+              labels: { usePointStyle: true, pointStyle: 'circle' }
+            },
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  const label = context.label || '';
+                  const value = context.formattedValue || context.raw;
+                  return label + ': ' + value + (isFinite(value) ? '%' : '');
+                }
+              }
+            }
+          }
+        }
+      });
+    })();
+</script>
+
+<script>
+  // Toggle contact form on Learn More button click
+  const learnMoreBtn = document.getElementById('learnMoreBtn');
+  const contactFormContainer = document.getElementById('contactFormContainer');
+
+  learnMoreBtn.addEventListener('click', () => {
+    contactFormContainer.classList.toggle('hidden');
+    contactFormContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  // Modern popup modal functionality
+  const contactForm = contactFormContainer.querySelector('form');
+  const popupModal = document.getElementById('popupModal');
+  const closeModal = document.getElementById('closeModal');
+
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault(); // prevent default form submission
+    popupModal.classList.remove('hidden');
+    popupModal.querySelector('.transform').classList.add('scale-100'); // grow animation
+    contactForm.reset(); // reset form fields
+  });
+
+  closeModal.addEventListener('click', () => {
+    popupModal.classList.add('hidden');
+  });
+
+  // Close modal on clicking outside
+  popupModal.addEventListener('click', (e) => {
+    if (e.target === popupModal) popupModal.classList.add('hidden');
+  });
+</script>
+
+<style>
+  /* Extra subtle floating shadow effect on the Learn More button */
+  #learnMoreBtn {
+    box-shadow: 0 6px 20px rgba(16,29,56,0.12);
+  }
+  #learnMoreBtn:hover {
+    box-shadow: 0 12px 30px rgba(16,29,56,0.2);
+  }
+</style>
+
+<!-- sponsor + small inline styles (map related CSS removed as per your request) -->
+<style>
+  /* make sponsor logos circular and gently animate */
+  .sponsor-mask .logo {
+    width: 84px;
+    height: 84px;
+    object-fit: cover;
+    border-radius: 9999px;
+    box-shadow: 0 6px 22px rgba(16,29,56,0.12);
+    transition: transform .3s ease, box-shadow .3s ease;
+  }
+  .sponsor-mask .logo:hover { transform: translateY(-6px) scale(1.03); box-shadow: 0 12px 30px rgba(16,29,56,0.18); }
+
+  /* --- Sponsor sliding animation --- */
+  .sponsor-mask { overflow: hidden; }
+  .sponsor-mask .animate-scroll {
+    display: inline-flex;
+    align-items: center;
+    will-change: transform;
+    animation: scroll-left 18s linear infinite;
+    animation-play-state: paused;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .sponsor-trigger:hover + .sponsor-mask .animate-scroll,
+  .sponsor-trigger:focus + .sponsor-mask .animate-scroll {
+    animation-play-state: running;
+  }
+  @keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .sponsor-trigger:focus {
+    outline: 3px solid rgba(0,201,177,0.18);
+    outline-offset: 4px;
+  }
+  @media (max-width: 640px) {
+    .sponsor-mask .logo { width:64px; height:64px; }
+    .sponsor-trigger { font-size: 1rem; }
+  }
+
+  /* make canvases responsive: they sit inside containers with set max-widths (inline styles used too) */
+  #coverageChart, #typeChart {
+    width: 100% !important;
+    height: 220px !important;
+  }
+  @media (min-width: 1024px) {
+    #coverageChart { height: 260px !important; }
+    #typeChart { height: 240px !important; }
+  }
+</style>
+
+</body>
+</html>
